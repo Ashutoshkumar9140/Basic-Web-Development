@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #0a1d19;
+  position: relative;
+}
+
+/* for navbar or header .......................................... */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(86, 28, 141);
+  height: 100px;
+  width: 100%;
+  font-size: 2vw;
+}
+
+/* for main (includes three sections or three outer div)........... */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* for all section(outer div)..................................... */
+.outer-main {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px; 
+}
+
+/* for all section (inner first div)................................ */
+.inner-main1 {
+  display: flex;
+  flex-direction: column;
+  min-width: 20%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2vw;
+  font-size: 1.5vw;
+  color: rgb(86, 28, 141);
+}
+
+/* for all section (inner Second div)................................. */
+.inner-main2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(151, 132, 132);
+  flex-direction: column;
+  align-items: start;
+  max-width: 80%;
+  padding: 10px;
+  font-size: 1.2vw;
+}
+
+/* for bold text inside paragraph......... */
+b {
+  color: #1e837f;
+}
+
+/* for link............................... */
+a {
+  color: bisque;
+  text-decoration: none;
+}
+
+/* for hover effect on link.............. */
+a:hover {
+  color: green;
+}
+
+/* for logo images....................... */
+img {
+  display: flex;
+  height: 8vw;
+  width: 8vw;
+  border-radius: 15%;
+}
+
+/* for footer.................................................................... */
+.foot {
+  height: 50px;
+  width: 100%;
+  padding-top: 10px;
+  padding: 5px;
+  margin-top: 40px;
+  color: rgb(151, 132, 132);
+  gap: 10px;
+  position: relative;
+  bottom: 1px;
+  padding-left: 6vw;
+ }
+
+/* for footer paragraph............................  */
+.foot p {
+  font-weight: 800;
+}
+
+/* fot login button............................... */
+#log_btn {
+  height: 2.5vw;
+  width: 8vw;
+  font-size: 1vw;
+  border-radius: 3vw;
+  border: 3px solid transparent;
+  background-color: #1e837f;
+}
+
+/* for hover effect on button.................... */
+#log_btn:hover {
+  border: 3px solid blue;
+}
+
+/* for active effect on button click.............. */
+#log_btn:active {
+  background-color: green;
+}
+
+/* for alert message just right the button........ */
+#msg {
+  display: inline-block;
+  margin-left: 10px;
+  color: rgb(178, 47, 47);
+  font-weight: bold;
+}
+
+/* for responsiveness................................................................. */
+
+@media (max-width: 600px) {
+  .nav {
+    height: 30px;
+    font-size: 2vw;
+  }
+  .outer-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+  }
+  .inner-main1 {
+    min-width: 20%;
+    gap: 1vw;
+    font-size: 2vw;
+  }
+  .inner-main2 {
+    max-width: 80%;
+    padding-top: 10px;
+    font-size: 2.7vw;
+  }
+  img {
+    height: 15vw;
+    width: 15vw;
+  }
+  .foot {
+    height: 50px;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    gap: 10px;
+    margin-top: 1px;
+  }
+  .foot p {
+    font-weight: 600;
+    font-size: 3vw;
+  }
+  #log_btn {
+    margin-top: 5px;
+    height: 6vw;
+    width: 20vw;
+    font-size: 2.5vw;
+    padding: 2px;
+    border-radius: 2vw;
+    border: none;
+    font-weight: 600;
+  }
+  #log_btn:hover {
+    border: 1px solid blue;
+  }
+  #msg {
+    font-weight: normal;
+  }
+}
