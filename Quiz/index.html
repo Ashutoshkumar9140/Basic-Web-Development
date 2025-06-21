@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="nav">
+        <h1>Just for FUN</h1>
+      </div>
+
+      <div class="main">
+        <div class="quiz-box container">
+          <h1 class="heading">QUIZ</h1>
+          <div class="quizz box">
+            
+
+<!-- ..........................Quiz Section............................................................ -->
+            <div id="config">
+              <h2>Configure Your Quiz</h2>
+          
+              <div class="cat  lb-in">
+                <!-- Category Selection -->
+                <label for="category">Category:</label>
+                <select id="category" class="in">
+                  <option value="">Any</option>
+                  <option value="9">G. K.</option>
+                  <option value="21">Sports</option>
+                  <option value="23">History</option>
+                  <option value="17">Science & Nature</option>
+                  <!-- You can add more categories based on the API reference -->
+                </select>
+              </div>
+          
+              <!-- Difficulty Level Selection -->
+              <div class="diff  lb-in">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty" class="in">
+                  <option value="">Any</option>
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                </select>
+              </div>
+          
+              <div class="amt  lb-in">
+                <!-- Number of Questions Selection -->
+                <label for="amount">Number of Questions:</label>
+                <input type="number" id="amount" class="in" min="1" max="50" value="5" />
+              </div>
+          
+              <div class="typ  lb-in">
+                <!-- Type of Questions Selection -->
+                <label for="type">Type of Questions:</label>
+                <select id="type" class="in">
+                  <option value="multiple">MCQ</option>
+                  <option value="boolean">True/False</option>
+                </select>
+              </div>
+          
+              <!-- Start Quiz Button -->
+              <button id="startQuizBtn">Start Quiz</button>
+
+              <div class="quizf foot">
+                <p>Customize your quiz: choose categories, set the number of questions, pick your difficulty level, and select question types (Multiple Choice or True/False).</p>
+              </div>
+            </div>
+        
+            <!-- Quiz question-answer section -->
+            <div id="quiz">
+              <h2 id="question">Loding</h2>
+              <div id="answers"></div>
+              <button id="nextBtn">Next</button>
+            </div>
+          
+            <!--  quiz completion window -->
+            <div class="score-board">
+              <h1>Quiz Completed</h1>
+              <div id="score">Your score : 0</div>
+              <button id="tryBtn">Try Again</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ....................................Jokes Section.............................................................. -->
+
+        <div class="jokes-box container">
+          <h1 class="heading">JOKES</h1>
+       
+          <div class="jokes box">
+            <div class="jokes-config">
+              
+              <h2>Enjoy some fun English jokes! Click the button below to start.</h2>
+              <button id="startJokes">See Jokes</button>
+              <div class="jokef foot">
+                <p>Lighten the mood with a random English joke anytime — laughter is just a tap away.</p>
+               </div>
+            </div>
+          
+          <div class="showJokes">
+            <div class="jokeText"></div>
+            <div class="button-row">
+              <button class="prevJoke">Previous</button>
+              <button class="nextJoke">Next</button>
+              <button class="exitJokes">Exit</button>
+            </div>
+          </div>
+          
+          <div class="restartJokes">
+            <h2>All jokes are shown. Please restart to see new jokes.</h2>
+            <button class="restartBtn">Restart</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

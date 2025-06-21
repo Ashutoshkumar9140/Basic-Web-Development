@@ -1,0 +1,448 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ................................................nav bar......................... */
+.nav {
+  background-color:#7FAEBB;
+  height: 10vh;
+  width: 100vw;
+  align-content: center;
+  text-align: center;
+  top: 0;
+  font-size: 4vh;
+  color: #543a83;
+}
+/* ..............................main section............................... */
+.main {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+}
+
+.container {
+  background-color: rgb(127, 174, 187);
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+ 
+}
+.heading{
+    position: absolute;
+    top: 5%;
+    color: #543a83;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 8px rgba(240, 32, 32, 0.5);
+  position: relative;
+}
+
+/* Quiz container styling ...........................*/
+#quiz {
+  background-color:#50a486;
+  width: 100%;
+  height: 100%;
+  padding: 2vw;
+  border-radius: 8px;
+  text-align: center;
+  display: none;
+  position: relative;
+
+}
+
+/* Answer button styling............................ */
+#answers button {
+  width: 100%;
+  padding: 1vw;
+  margin: 1.5vh 0;
+  background-color:  #b7bbbf;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(14px,3vw,16px);
+  transition: background-color 0.3s;
+  text-align: start;
+}
+
+/* Button hover effect......................... */
+#answers button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Button active state */
+#answers button:active {
+  background-color: #0056b3;
+}
+
+/* config div styling */
+#config{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  background-color: #50a486;
+  padding: 20px;
+  position: relative;
+}
+
+/* for div containing label and select or input..................... */
+.lb-in{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(18px,4vw,22px);
+}
+
+/* for select portion.................................... */
+.in{
+  height: clamp(35px,4vw,45px);
+  font-size: 20px;
+  padding: 0 10px ;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  width: 30%;
+}
+#question{
+  height: 15%;
+  font-size: 20px;
+  align-content: center;
+}
+
+/* for next question button ............................ */
+#nextBtn{
+  position: absolute;
+  bottom: 10px;
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid transparent;
+  align-self: center;
+  translate: -50%;
+  background-color: #4d7096;
+  color: white;
+
+}
+#nextBtn:hover{
+  border: 2px solid black;
+}
+#nextBtn:active{
+  background-color: rgb(88, 88, 139);
+}
+
+/* Quiz start button................................ */
+#startQuizBtn{
+  background-color: #4d7096;
+  padding: 2px;
+  color: white;
+  font-size: 16px;
+  width: 100px;
+  height: 50px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  
+}
+#startQuizBtn:active{
+  background-color: #b6d1f0;
+
+}
+
+.in:focus {
+  background-color: #b6d1f0;
+}
+
+.in:hover {
+  border: 2px solid black;
+}
+
+/* for score board or quiz completion window ................*/
+.score-board{
+background-color: #50a486;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 50px;
+width: 100%;
+height: 100%;
+gap: 5vh;
+display: none;
+}
+
+/* for try again button property*/
+#tryBtn{
+height: 50px;
+width: 150px;
+font-size: 25px;
+border-radius: 20px;
+outline: none;
+border: 2px solid transparent;
+}
+
+/* for try again button  hover property*/
+#tryBtn:hover{
+border: 2px solid black;
+}
+
+/* for score text */
+#score{
+font-size: 25px;
+font-weight: 800;
+}
+
+
+
+/* Jokes Section ....................................................*/
+.jokes-config, .showJokes, .restartJokes {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+  background-color: #50a486;
+}
+
+/* joke config section */
+.jokes-config {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+}
+
+/* see jokes button */
+#startJokes {
+  padding: 1rem 2rem;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #4D7096;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 0.8rem;
+}
+
+#startJokes:hover {
+  background-color: #6948a7;
+  border: 2px solid black;
+}
+
+.showJokes {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: none;
+}
+
+.jokeText {
+  height: 40%;
+  width: 100%;
+  font-weight: 800;
+  font-size: 25px;
+  text-align: start;
+  align-content: center;
+}
+/* Next,Pre and Exit button............................................ */
+.button-row {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button-row button {
+  height: 40px;
+  width: 30%;
+  padding: 5px;
+  font-size: 16px;
+  background-color: #4D7096;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-row button:hover{
+  border: 2px solid black;
+}
+
+.button-row button:active{
+  background-color: #6948a7;
+}
+
+.restartJokes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  font-size: 30px;
+  display: none;
+  
+}
+
+/* Restart the jokes button............................. */
+.restartBtn{
+  height: 50px;
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+  background-color: rgb(36, 135, 188);
+  border: 2px solid transparent;
+  border-radius: 10px;
+
+}
+.restartBtn:hover{
+  border: 2px solid black;
+}
+
+.restartBtn:active{
+  background-color: #6948a7;
+}
+
+.restartJokes h2{
+  height: 50%;
+  width: 100%;
+  background-color: #4D7096;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  border-radius: 20px;
+}
+
+.foot{
+  padding: 1vh;
+  align-content: start;
+  overflow: hidden;
+  font-size: 18px;
+  
+}
+
+
+
+/* For mobail view........................................ */
+
+@media (max-width:700px) {
+
+  .main {
+    height: 190vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav h1{
+    font-size: clamp(25px,5vw,40px);
+
+  }
+
+  .main-container {
+    height: 195vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .container {
+    background-color: rgb(127, 174, 187);
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  #config{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+    background-color: #50a486;
+    padding: 3vh;
+  }
+
+  #question{
+    height: 20%;
+    font-size: 20px;
+    align-content: center;
+  }
+
+  .button-row {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 10%;
+  }
+  
+  .button-row button {
+    height: 50px;
+    width: 150px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #4D7096;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.jokeText {
+  height: 40%;
+  width: 100%;
+  font-weight: 800;
+  font-size: 30px;
+  text-align: start;
+  align-content: center;
+}
+ 
+}
