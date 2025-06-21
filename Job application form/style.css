@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+}
+header {
+    position: absolute;
+    margin-top: 0;
+  
+    text-align: center;
+  
+    height: 70px;
+    max-width: 100%;
+    line-height: 70px;
+  }
+form {
+  
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 500px;
+  align-items: center;
+  background-color: white;
+  margin: 30px;
+}
+
+label {
+  display: block;
+}
+
+main {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content:space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+input , select{
+    /* display: flex; */
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 30px;
+  width: 200px;
+  text-align: start;
+  padding-left: 5px;
+  
+  
+}
+
+
+
+
+#address{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    padding-left: 5px;
+    /* height: 70%; */
+    
+    
+   
+}
+ #e{
+    flex-grow: 2;
+    width: 100%;
+ }
+
+
+button{
+    height: 30px;
+    width: 100px;
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 10px;
+    
+}
+
+#j{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    
+   
+}
+#file{
+    /* background-color: rebeccapurple; */
+    padding:2.5px 0 0 5px;
+    border: 2px solid black;
+}
+#file:hover{
+    border: 3px solid lightblue;
+}
+
+
+    
+
+.a:hover{
+    border: 3px solid lightblue;
+
+}
+
+
+
+
+
+
+
+
+
+

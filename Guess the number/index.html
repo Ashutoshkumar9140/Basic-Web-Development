@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+  <div class="container">
+    <form class="box">
+      <h1 class="main-heading">Guess Game</h1>
+      <button type="submit" class="str">Start / Reset</button>
+      <div class="limit">
+        <div class="rem">
+          <p >Set limit <span  class="nowrap">1-10</span></p>
+        <input class="att-limit" type="number" value="5" min="1" max="10" />
+        </div>
+        <p class="rem-limit">Remaining <span class="nowrap">attempts :</span> 5</p>
+      </div>
+      <h2>Enter a number from 1-100</h2>
+      <input class="in" type="number" min="0" max="100" placeholder="Enter your number" />
+      <button class="sub" type="button">Enter</button>
+      <p class="hint">Hint :</p>
+      <p class="guess">Incorrect guesses :</p>
+      <p class="rev">
+        Click on Reveal to see answer :
+        <button class="see-ans">Reveal</button>
+      </p>
+      <div class="result">
+        <p class="cor-ans">Correct answer is : 0</p>
+        <h1 class="res">You win</h1>
+      </div>
+    </form>
+  </div>
+
+
+</body>
+
+</html>

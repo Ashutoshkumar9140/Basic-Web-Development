@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamSafe - Secure Storage for Students</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <!-- Left: Logo -->
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>ExamSafe</span>
+            </div>
+            
+            <!-- Center: Navigation -->
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Right: Auth buttons (hidden when logged in) -->
+            <div class="auth-buttons" id="authButtons">
+                <button class="btn btn-outline" id="loginBtn">Login</button>
+                <button class="btn btn-primary" id="registerBtn">Register</button>
+            </div>
+            
+            <!-- Right: Logout button (hidden when logged out) -->
+            <div class="logout-container" id="logoutContainer">
+                <button class="btn btn-outline" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content (Visible before login) -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Secure Storage for Students During Exams</h1>
+                    <p>Find trusted homes near exam centers to safely store your bags, bikes, and belongings while you focus on your exams</p>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search for exam centers...">
+                        <button><i class="fas fa-search"></i> Search</button>
+                    </div>
+                    <div class="exam-centers">
+                        <span>Popular Exam Centers:</span>
+                        <div class="center-tags">
+                            <span>IIT Delhi</span>
+                            <span>Delhi University</span>
+                            <span>Jamia Millia Islamia</span>
+                            <span>NIFT Delhi</span>
+                            <span>DTU</span>
+                            <span>IPU</span>
+                            <span>Amity University</span>
+                            <span>SRCC</span>
+                            <span>St. Stephen's</span>
+                            <span>IIM Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="section" id="how-it-works">
+            <div class="container">
+                <div class="section-title">
+                    <h2>How ExamSafe Works</h2>
+                    <p>Simple steps to secure your belongings during exams</p>
+                </div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-search-location"></i>
+                        </div>
+                        <h3>Find Exam Centers</h3>
+                        <p>Search for your exam center location to see nearby homes offering storage</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-house-user"></i>
+                        </div>
+                        <h3>Choose a Home</h3>
+                        <p>Select a trusted home with the facilities you need at the best price</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Book & Pay Online</h3>
+                        <p>Book your storage slot and make secure payment through our platform</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Store & Focus</h3>
+                        <p>Drop off your belongings and focus on your exam with peace of mind</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="section features" id="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Features</h2>
+                    <p>Everything you need for a stress-free exam day</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-img">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Secure Storage">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Secure Storage</h3>
+                            <p>Verified homes with safe storage options for:</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Bags and backpacks</li>
+                                <li><i class="fas fa-check-circle"></i> Bicycles and helmets</li>
+                                <li><i class="fas fa-check-circle"></i> Valuables and electronics</li>
+                                <li><i class="fas fa-check-circle"></i> Study materials</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-img">
+                            <img src="https://images.unsplash.com/photo-1556911220-ef412ae179a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Extra Amenities">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Extra Amenities</h3>
+                            <p>Many homes offer additional facilities:</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Waiting area with seating</li>
+                                <li><i class="fas fa-check-circle"></i> Drinking water and snacks</li>
+                                <li><i class="fas fa-check-circle"></i> Mobile charging stations</li>
+                                <li><i class="fas fa-check-circle"></i> Restroom access</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-img">
+                            <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Student Benefits">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Student Benefits</h3>
+                            <p>Special advantages for exam takers:</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> First-time booking discounts</li>
+                                <li><i class="fas fa-check-circle"></i> Referral bonus points</li>
+                                <li><i class="fas fa-check-circle"></i> Loyalty rewards program</li>
+                                <li><i class="fas fa-check-circle"></i> Emergency support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-title light">
+                    <h2>What Students & Homeowners Say</h2>
+                    <p>Real experiences from our community</p>
+                </div>
+                <div class="testimonial-container">
+                    <div class="testimonial">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Priya Sharma">
+                        <p>"ExamSafe helped me find a safe place to keep my bag just 100m from my exam center. The homeowner even offered me water and a place to sit before my exam!"</p>
+                        <div class="name">Priya Sharma</div>
+                        <div class="role">Student, Kanpur</div>
+                    </div>
+                    <div class="testimonial">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Raj Patel">
+                        <p>"As a homeowner, ExamSafe has been a great way to earn extra income. The students are respectful and the platform handles all payments securely."</p>
+                        <div class="name">Raj Patel</div>
+                        <div class="role">Homeowner, Mumbai</div>
+                    </div>
+                    <div class="testimonial">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ananya Singh">
+                        <p>"I was worried about my laptop during my exam. ExamSafe connected me with a homeowner who provided secure storage just across the street from my center."</p>
+                        <div class="name">Ananya Singh</div>
+                        <div class="role">Student, Bangalore</div>
+                    </div>
+                    <div class="testimonial">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Vikram Mehta">
+                        <p>"The booking system is very easy to use. I've hosted over 50 students and the experience has been wonderful. Highly recommend to other homeowners."</p>
+                        <div class="name">Vikram Mehta</div>
+                        <div class="role">Homeowner, Delhi</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Find answers to common questions about ExamSafe</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do I find storage near my exam center?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Simply enter your exam center location in our search bar, and we'll show you all available homes offering storage services in that area. You can filter by distance, price, and available facilities.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            When do I get the homeowner's contact details?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            After you complete the booking process and payment, you'll receive the homeowner's full contact information and exact address. This ensures a secure transaction for both parties.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What safety measures are in place?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            All homeowners are verified through our screening process. We require identity verification and only list homes near recognized exam centers. Additionally, our rating system helps you choose the most reliable options.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I cancel my booking?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, you can cancel up to 24 hours before your exam for a full refund. Cancellations within 24 hours may be subject to a fee as specified in our cancellation policy.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>ExamSafe</h3>
+                        <p>Providing secure storage solutions for students during exams across India.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>For Homeowners</h3>
+                        <ul>
+                            <li><a href="#">Register Your Home</a></li>
+                            <li><a href="#">Homeowner Guidelines</a></li>
+                            <li><a href="#">Pricing & Commission</a></li>
+                            <li><a href="#">Safety Standards</a></li>
+                            <li><a href="#">Support Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Education Street, Noida, India 201301</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+91 9140300000</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>support@examsafe.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 ExamSafe. All rights reserved. | Designed with ❤️ for Indian Students</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Dashboard Section (Hidden before login) -->
+    <section id="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="dashboard-welcome">
+                    <div class="user-avatar" id="userAvatar">A</div>
+                    <div>
+                        <h2>Welcome, <span id="userName">Ashu Sharma</span></h2>
+                        <p id="userType"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Homeowner Dashboard -->
+            <div id="homeowner-dashboard" class="dashboard-content">
+                <div class="dashboard-sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                        <li><a href="#"><i class="fas fa-plus-circle"></i> Add New Property</a></li>
+                        <li><a href="#"><i class="fas fa-home"></i> My Properties</a></li>
+                        <li><a href="#"><i class="fas fa-bell"></i> Booking Requests</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-check"></i> Upcoming Bookings</a></li>
+                        <li><a href="#"><i class="fas fa-history"></i> Booking History</a></li>
+                        <li><a href="#"><i class="fas fa-star"></i> Reviews & Ratings</a></li>
+                        <li><a href="#"><i class="fas fa-wallet"></i> Earnings</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="dashboard-main">
+                    <!-- Notifications Section -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-bell"></i> Booking Requests</h3>
+                        <div class="booking-requests">
+                            <div class="request-card">
+                                <div class="request-info">
+                                    <div class="student-info">
+                                        <div class="student-avatar">R</div>
+                                        <div>
+                                            <h4>Rahul Verma</h4>
+                                            <p>For IIT Delhi Exam - 15 May</p>
+                                        </div>
+                                    </div>
+                                    <div class="property-info">
+                                        <h4>Patel Residence</h4>
+                                        <p>2 bags + 1 bike</p>
+                                    </div>
+                                </div>
+                                <div class="request-actions">
+                                    <button class="btn btn-primary accept-btn">Accept</button>
+                                    <button class="btn btn-outline reject-btn">Reject</button>
+                                </div>
+                            </div>
+                            <div class="request-card">
+                                <div class="request-info">
+                                    <div class="student-info">
+                                        <div class="student-avatar">P</div>
+                                        <div>
+                                            <h4>Priya Mehta</h4>
+                                            <p>For DU Exam - 18 May</p>
+                                        </div>
+                                    </div>
+                                    <div class="property-info">
+                                        <h4>Gupta House</h4>
+                                        <p>1 bag + laptop</p>
+                                    </div>
+                                </div>
+                                <div class="request-actions">
+                                    <button class="btn btn-primary accept-btn">Accept</button>
+                                    <button class="btn btn-outline reject-btn">Reject</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Properties Management -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-home"></i> My Properties</h3>
+                        <div class="properties-grid">
+                            <div class="property-card">
+                                <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')"></div>
+                                <div class="property-details">
+                                    <h4>Patel Residence</h4>
+                                    <div class="property-info">
+                                        <p><i class="fas fa-map-marker-alt"></i> Near IIT Delhi, 250m</p>
+                                        <p><i class="fas fa-rupee-sign"></i> ₹150 per booking</p>
+                                    </div>
+                                    <div class="property-facilities">
+                                        <span><i class="fas fa-check"></i> Bags</span>
+                                        <span><i class="fas fa-check"></i> Bikes</span>
+                                        <span><i class="fas fa-check"></i> Waiting Area</span>
+                                    </div>
+                                    <div class="property-actions">
+                                        <button class="btn btn-outline"><i class="fas fa-edit"></i> Edit</button>
+                                        <button class="btn btn-outline"><i class="fas fa-trash"></i> Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-card">
+                                <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')"></div>
+                                <div class="property-details">
+                                    <h4>Gupta House</h4>
+                                    <div class="property-info">
+                                        <p><i class="fas fa-map-marker-alt"></i> Near Delhi University, 180m</p>
+                                        <p><i class="fas fa-rupee-sign"></i> ₹120 per booking</p>
+                                    </div>
+                                    <div class="property-facilities">
+                                        <span><i class="fas fa-check"></i> Bags</span>
+                                        <span><i class="fas fa-check"></i> Waiting Area</span>
+                                        <span><i class="fas fa-check"></i> Snacks</span>
+                                    </div>
+                                    <div class="property-actions">
+                                        <button class="btn btn-outline"><i class="fas fa-edit"></i> Edit</button>
+                                        <button class="btn btn-outline"><i class="fas fa-trash"></i> Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-property">
+                                <div class="add-property-content">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <h4>Add New Property</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Reviews Section -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-star"></i> Reviews & Ratings</h3>
+                        <div class="reviews-container">
+                            <div class="rating-summary">
+                                <div class="overall-rating">
+                                    <h4>4.7</h4>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p>Based on 28 reviews</p>
+                                </div>
+                                <div class="rating-details">
+                                    <div class="rating-item">
+                                        <span>Cleanliness</span>
+                                        <div class="rating-bar">
+                                            <div class="rating-progress" style="width: 90%"></div>
+                                        </div>
+                                        <span>4.5</span>
+                                    </div>
+                                    <div class="rating-item">
+                                        <span>Safety</span>
+                                        <div class="rating-bar">
+                                            <div class="rating-progress" style="width: 95%"></div>
+                                        </div>
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="rating-item">
+                                        <span>Facilities</span>
+                                        <div class="rating-bar">
+                                            <div class="rating-progress" style="width: 85%"></div>
+                                        </div>
+                                        <span>4.3</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews-list">
+                                <div class="review-card">
+                                    <div class="review-header">
+                                        <div class="student-avatar">R</div>
+                                        <div>
+                                            <h4>Rahul Verma</h4>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span>2 days ago</span>
+                                    </div>
+                                    <p>"Mr. Patel was very helpful and provided a safe place for my belongings during the exam. The waiting area was comfortable with water and snacks."</p>
+                                </div>
+                                <div class="review-card">
+                                    <div class="review-header">
+                                        <div class="student-avatar">A</div>
+                                        <div>
+                                            <h4>Ananya Singh</h4>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                        </div>
+                                        <span>1 week ago</span>
+                                    </div>
+                                    <p>"Secure storage with charging facilities. The location was perfect, just across from my exam center. Will definitely use again for my next exam."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Earnings Section -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-wallet"></i> Earnings Overview</h3>
+                        <div class="earnings-container">
+                            <div class="earnings-summary">
+                                <div class="earnings-card">
+                                    <h4>₹8,750</h4>
+                                    <p>Total Earnings</p>
+                                </div>
+                                <div class="earnings-card">
+                                    <h4>₹3,200</h4>
+                                    <p>This Month</p>
+                                </div>
+                                <div class="earnings-card">
+                                    <h4>12</h4>
+                                    <p>Upcoming Bookings</p>
+                                </div>
+                            </div>
+                            <div class="earnings-chart">
+                                <div class="chart-bar" style="height: 70%;">
+                                    <span>Jan</span>
+                                </div>
+                                <div class="chart-bar" style="height: 85%;">
+                                    <span>Feb</span>
+                                </div>
+                                <div class="chart-bar" style="height: 65%;">
+                                    <span>Mar</span>
+                                </div>
+                                <div class="chart-bar" style="height: 90%;">
+                                    <span>Apr</span>
+                                </div>
+                                <div class="chart-bar" style="height: 100%; background-color: var(--primary);">
+                                    <span>May</span>
+                                </div>
+                                <div class="chart-bar" style="height: 40%;">
+                                    <span>Jun</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+            <!-- Student Dashboard -->
+            <div id="student-dashboard" class="dashboard-content" style="display: none;">
+                <div class="dashboard-sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i> Find Storage</a></li>
+                        <li><a href="#"><i class="fas fa-wallet"></i> My Wallet</a></li>
+                        <li><a href="#"><i class="fas fa-gift"></i> Offers & Discounts</a></li>
+                        <li><a href="#"><i class="fas fa-history"></i> Booking History</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-check"></i> Upcoming Bookings</a></li>
+                        <li><a href="#"><i class="fas fa-user"></i> Profile Settings</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="dashboard-main">
+                    <!-- Upcoming Bookings Section -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-calendar-check"></i> Upcoming Bookings</h3>
+                        <div class="bookings-list">
+                            <div class="booking-card">
+                                <div class="booking-info">
+                                    <div class="booking-header">
+                                        <h4>Patel Residence</h4>
+                                        <span class="booking-status confirmed">Confirmed</span>
+                                    </div>
+                                    <div class="booking-details">
+                                        <p><i class="fas fa-map-marker-alt"></i> Near IIT Delhi, 250m</p>
+                                        <p><i class="fas fa-calendar"></i> 15 May 2025, 8:00 AM - 12:00 PM</p>
+                                        <p><i class="fas fa-rupee-sign"></i> ₹150</p>
+                                    </div>
+                                    <div class="booking-items">
+                                        <span><i class="fas fa-briefcase"></i> 1 Bag</span>
+                                        <span><i class="fas fa-bicycle"></i> 1 Bike</span>
+                                    </div>
+                                </div>
+                                <div class="booking-actions">
+                                    <button class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> Directions</button>
+                                    <button class="btn btn-primary"><i class="fas fa-phone-alt"></i> Contact Host</button>
+                                </div>
+                            </div>
+                            <div class="booking-card">
+                                <div class="booking-info">
+                                    <div class="booking-header">
+                                        <h4>Gupta House</h4>
+                                        <span class="booking-status pending">Pending</span>
+                                    </div>
+                                    <div class="booking-details">
+                                        <p><i class="fas fa-map-marker-alt"></i> Near Delhi University, 180m</p>
+                                        <p><i class="fas fa-calendar"></i> 18 May 2025, 9:00 AM - 1:00 PM</p>
+                                        <p><i class="fas fa-rupee-sign"></i> ₹120</p>
+                                    </div>
+                                    <div class="booking-items">
+                                        <span><i class="fas fa-briefcase"></i> 1 Bag</span>
+                                        <span><i class="fas fa-laptop"></i> 1 Laptop</span>
+                                    </div>
+                                </div>
+                                <div class="booking-actions">
+                                    <button class="btn btn-outline"><i class="fas fa-times"></i> Cancel</button>
+                                    <button class="btn btn-primary"><i class="fas fa-edit"></i> Modify</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Find Storage Section -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-search"></i> Find Storage Near Exam Centers</h3>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search for exam centers...">
+                            <button><i class="fas fa-search"></i> Search</button>
+                        </div>
+                        <div class="recommended-centers">
+                            <h4>Recommended Exam Centers:</h4>
+                            <div class="center-tags">
+                                <span>IIT Delhi</span>
+                                <span>Delhi University</span>
+                                <span>Jamia Millia Islamia</span>
+                                <span>NIFT Delhi</span>
+                                <span>DTU</span>
+                                <span>IPU</span>
+                                <span>Amity University</span>
+                                <span>SRCC</span>
+                                <span>St. Stephen's</span>
+                                <span>IIM Bangalore</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Wallet Section -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-wallet"></i> My Wallet</h3>
+                        <div class="wallet-summary">
+                            <div class="wallet-balance">
+                                <h4>₹1,250</h4>
+                                <p>Available Balance</p>
+                            </div>
+                            <div class="wallet-actions">
+                                <button class="btn btn-outline"><i class="fas fa-plus"></i> Add Money</button>
+                                <button class="btn btn-outline"><i class="fas fa-history"></i> Transaction History</button>
+                            </div>
+                        </div>
+                        <div class="offers-section">
+                            <h4>Available Offers:</h4>
+                            <div class="offer-card">
+                                <div class="offer-content">
+                                    <h5>First Booking Discount</h5>
+                                    <p>Get 30% off on your first booking</p>
+                                    <span class="offer-code">NEW30</span>
+                                </div>
+                                <button class="btn btn-primary">Apply</button>
+                            </div>
+                            <div class="offer-card">
+                                <div class="offer-content">
+                                    <h5>Referral Bonus</h5>
+                                    <p>Get ₹100 for every friend you refer</p>
+                                    <span class="offer-code">REFER100</span>
+                                </div>
+                                <button class="btn btn-primary">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Bookings -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-history"></i> Recent Bookings</h3>
+                        <div class="bookings-history">
+                            <div class="history-card">
+                                <div class="history-header">
+                                    <h4>Sharma Residence</h4>
+                                    <span class="booking-date">12 May 2025</span>
+                                </div>
+                                <div class="history-details">
+                                    <p><i class="fas fa-map-marker-alt"></i> Near Jamia Millia Islamia, 150m</p>
+                                    <p><i class="fas fa-rupee-sign"></i> ₹100</p>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>4.5</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline">View Details</button>
+                            </div>
+                            <div class="history-card">
+                                <div class="history-header">
+                                    <h4>Kumar House</h4>
+                                    <span class="booking-date">5 May 2025</span>
+                                </div>
+                                <div class="history-details">
+                                    <p><i class="fas fa-map-marker-alt"></i> Near IP University, 300m</p>
+                                    <p><i class="fas fa-rupee-sign"></i> ₹130</p>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login to ExamSafe</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="user-type-selection">
+                    <h4>Login As:</h4>
+                    <div class="user-type-options">
+                        <div class="user-type-option active" data-type="student">
+                            <i class="fas fa-user-graduate"></i>
+                            <p>Student</p>
+                        </div>
+                        <div class="user-type-option" data-type="homeowner">
+                            <i class="fas fa-home"></i>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" style="width:100%" id="loginSubmit">Login</button>
+                </div>
+                <p style="text-align:center; margin-top:15px;">
+                    <a href="#" style="color:var(--primary);">Forgot Password?</a>
+                </p>
+                <div style="text-align:center; margin-top:20px;">
+                    <p>Don't have an account? <a href="#" id="switchToRegister" style="color:var(--primary); font-weight:500;">Register Now</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create an Account</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="user-type">
+                    <div class="user-type-btn active" id="studentBtn">
+                        <i class="fas fa-user-graduate"></i>
+                        <p>Student</p>
+                    </div>
+                    <div class="user-type-btn" id="homeownerBtn">
+                        <i class="fas fa-home"></i>
+                        <p>Homeowner</p>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="password">Create Password</label>
+                    <input type="password" id="password" placeholder="Create a strong password">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password">
+                </div>
+                
+                <!-- Student Specific Fields -->
+                <div id="studentFields">
+                    <div class="form-group">
+                        <label for="institution">Educational Institution</label>
+                        <input type="text" id="institution" placeholder="Enter your school/college name">
+                    </div>
+                </div>
+                
+                <!-- Homeowner Specific Fields -->
+                <div id="homeownerFields" style="display:none;">
+                    <div class="form-group">
+                        <label for="address">Full Address</label>
+                        <input type="text" id="address" placeholder="Enter your full address">
+                    </div>
+                    <div class="form-group">
+                        <label>Facilities Offered</label>
+                        <div class="form-switch">
+                            <input type="checkbox" id="water" checked>
+                            <label for="water">Drinking Water</label>
+                        </div>
+                        <div class="form-switch">
+                            <input type="checkbox" id="charging">
+                            <label for="charging">Mobile Charging</label>
+                        </div>
+                        <div class="form-switch">
+                            <input type="checkbox" id="waitingArea">
+                            <label for="waitingArea">Waiting Area</label>
+                        </div>
+                        <div class="form-switch">
+                            <input type="checkbox" id="restroom">
+                            <label for="restroom">Restroom Access</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn btn-primary" style="width:100%" id="registerSubmit">Create Account</button>
+                </div>
+                <div style="text-align:center; margin-top:20px;">
+                    <p>Already have an account? <a href="#" id="switchToLogin" style="color:var(--primary); font-weight:500;">Login Now</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

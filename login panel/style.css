@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.loginPannel{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(51, 74, 96, 0.646);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.outer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 700px;
+    padding-top: 50px;
+    width: 500px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgb(82, 81, 81), -7px -7px 3px rgb(198, 198, 198);
+}
+.outer i{
+   font-size: 60px;
+   color: azure;
+}
+.inner{
+    background-color: rgba(157, 160, 161, 0.2);
+    height: 40px;
+    width: 80%;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: inset 5px 5px 3px rgb(98, 97, 97),inset -5px -5px 3px rgb(242, 239, 239);
+}
+#eml-pass{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+    margin-top: 50px;
+    gap: 30px;
+}
+#bottom p{
+    display: inline;
+}
+#bottom{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#pass-for{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+#bottom-a{
+    text-decoration: none;
+    color:rgb(121, 40, 197)
+}
+#pass-for a{
+    text-decoration: none;
+    color:rgb(128, 40, 201);
+    
+}
+#for-pass{
+    display: block;
+}
+#btn{
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(95, 93, 93);
+}
+
+::placeholder {
+    color: rgb(81, 80, 80); 
+    opacity: 1; 
+  }
+  button, input, textarea {
+    border: none;
+    outline: none;
+    box-shadow: none; 
+  }
+  
+.outer i:hover{
+    color: aqua;
+}
+/* a:active{
+    color: rgb(128, 0, 0);
+    font-size: 15px;
+} */
+#bottom-a:hover{
+    color: rgb(35, 184, 184);
+}
+#for-pass:hover{
+    color: rgb(26, 190, 190);
+}
+input:focus::placeholder {
+    color: transparent;
+  }
+  input:focus {
+    background-color: #9cc7cd;
+    cursor: text;
+}
+  .abc:hover{   
+    box-shadow: inset 5px 5px 3px rgb(98, 97, 97),inset -5px -5px 3px rgb(242, 239, 239) ,0 0 10px aqua;
+  }
+ #btn:active{
+    background-color: green;
+ }
+ #btn:hover{
+    box-shadow: 0 0 10px aqua;
+ }
+ #last {
+    display: none;
+    height: 600px;
+    width: 800px;
+    background-color: rgb(70, 104, 118);
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(82, 81, 81), -7px -7px 3px rgb(198, 198, 198);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    flex-direction: column;
+    gap: 25px;
+  }
+ 
